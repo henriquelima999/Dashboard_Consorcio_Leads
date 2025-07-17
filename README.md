@@ -24,8 +24,8 @@ Organizar e visualizar leads comerciais em tempo real com indicadores de perform
 ## 🔗 Link para visualização
 https://lookerstudio.google.com/s/qNxRTvHlKe8
 
-## 📁 Scripts
-Scripts disponíveis na pasta `/scripts`.
+## 📁 Script
+Scripts disponíveis na pasta `/script`.
 
 ---
 
