@@ -1,0 +1,27 @@
+function onFormSubmit(e) {
+  const formData = e.values;
+  const leadsSheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Leads");
+
+  // Captura os dados do formulário
+  const data = new Date();
+  const nome = formData[1];
+  const telefone = formData[2];
+  const email = formData[3];
+  const origem = formData[4];
+  const observacoes = formData[6];
+
+  // Monta a linha para inserir
+  const novaLinha = [
+    Utilities.formatDate(data, Session.getScriptTimeZone(), "dd/MM/yyyy"),
+    nome,
+    telefone,
+    email,
+    origem,
+    "Novo", // status padrão
+    Utilities.formatDate(data, Session.getScriptTimeZone(), "dd/MM/yyyy"),
+    observacoes
+  ];
+
+  // Adiciona à aba "Leads"
+  leadsSheet.appendRow(novaLinha);
+}
